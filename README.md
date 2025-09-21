@@ -12,7 +12,7 @@
 | 7  |                                   |          |
 
 
-# Building a Secure National Bank Network with FortiGate & Cisco (GNS3 Project)
+# Secure National Bank Network with FortiGate & Cisco (GNS3 Project)
 
 ## Project Overview
 
@@ -95,19 +95,6 @@ To ensure a structured and efficient project workflow, we will follow these key 
 8.  **Security Policy & Threat Protection:** Configure granular firewall policies, enable Intrusion Prevention System (IPS), Application Control, Web Filtering, and Antivirus profiles on all FortiGates to enforce robust security.
 9.  **FortiAnalyzer Integration:** Integrate all deployed FortiGates with the central FortiAnalyzer instance for aggregated logging, real-time monitoring, and in-depth security analysis.
 10. **Testing & Validation:** Conduct rigorous testing of all connectivity paths, security policies (positive and negative testing), VPN tunnels, failover mechanisms (for HO HA pair), and overall network resilience.
-
-## 6. Expected Outcomes & Learning
-
-Through the successful completion of this project, our team expects to gain invaluable hands-on experience and cultivate a deeper, practical understanding of:
-
-*   Enterprise-grade network design principles and best practices for large-scale, distributed environments.
-*   Advanced FortiGate firewall configurations, including FortiOS features such as NGFW, VPN, SD-WAN, and Security Fabric.
-*   Proficiency in Cisco routing and switching configurations within a multi-VLAN, multi-protocol environment.
-*   The implementation of secure VPN topologies, encompassing both Site-to-Site and Remote Access solutions.
-*   Fundamental SD-WAN concepts and their practical configuration for improved network performance and cost efficiency.
-*   Comprehensive security best practices specifically tailored for critical financial institutions.
-*   Advanced troubleshooting methodologies for complex network and security issues within the GNS3 simulation environment.
-*   Collaborative project management, documentation, and version control within a team setting.
 
 ---
 Here's a conceptual diagram of the GNS3 topology, showing the main components and their interconnections:
