@@ -1,17 +1,6 @@
 # DEPI_CyberSecurity_Project_2025  
 ## Network Security Fundamentals and FortiGate Integration  
 
-| No | Names                             | ID       |
-|----|-----------------------------------|----------|
-| 1  | Ziad Refaie AbuAlftooh            | 21043261 |
-| 2  | Abdullah Ibrahim Abdo             | 21027586 |
-| 3  | Mahmoud Mohamed Mahmoud Fahim     | 21080355 |
-| 4  | Haitham Ibrahim Mahmoud Hosny     | 21045793 |
-| 5  | Abdullah Muhammad Khalifa         | 21098162 |
-| 6  | Ahmed Mohamed Ahmed               | 21082322 |
-| 7  |                                   |          |
-
-
 # Network Security Fundamentals with FortiGate Integration  
 *Project Repository — National Bank (HQ + 4 Branches)*  
 ![Bank Network Topology](https://github.com/ZiadRefaie/DEPI_CyberSecurity_Project_2025/blob/3b919c2e81d75f5a1548245fd3e3ecf3f348bd97/Bank_Topology.png)
@@ -103,9 +92,22 @@ The simulation is fully deployed in **GNS3**, offering flexibility for configura
 ## ✅ Summary  
 This project simulates a **realistic bank network** at a CCNA level with **FortiGate NGFW integration** for enterprise security. Using **GNS3**, it demonstrates:  
 - Routing & VLAN fundamentals  
-- Secure HQ–Branch WAN design  
+- Secure HQ–Branch WAN design
 - High availability at HQ  
 - Firewall, VPN, and policy enforcement  
 
----
+## Team Members
+
+| No | Names                             | ID       |
+|----|-----------------------------------|----------|
+| 1  | Ziad Refaie AbuAlftooh            | 21043261 |
+| 2  | Abdullah Ibrahim Abdo             | 21027586 |
+| 3  | Mahmoud Mohamed Mahmoud Fahim     | 21080355 |
+| 4  | Haitham Ibrahim Mahmoud Hosny     | 21045793 |
+| 5  | Abdullah Muhammad Khalifa         | 21098162 |
+| 6  | Ahmed Mohamed Ahmed               | 21082322 |
+| 7  |                                   |          |
+
+Under the Supervision of,
+Eng\Elhosien Ahmed & Dr.Hussien Harb
 
