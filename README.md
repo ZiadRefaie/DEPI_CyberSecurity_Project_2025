@@ -96,7 +96,7 @@ This project simulates a **realistic bank network** at a CCNA level with **Forti
 - High availability at HQ  
 - Firewall, VPN, and policy enforcement  
 
-## Team Members
+## :no_pedestrians: Team Members
 
 | No | Names                             | ID       |
 |----|-----------------------------------|----------|
