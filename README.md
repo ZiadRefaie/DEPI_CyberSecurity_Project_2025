@@ -12,7 +12,20 @@ This project outlines the design and implementation of a **National Bank network
 The network consists of:  
 - **1 Headquarters (HQ)**  
 - **4 Branches**  
-- All interconnected securely through **WAN links**.  
+- All interconnected securely through **WAN links**.
+
+Done Tasks: ✔️
+   Topology Built
+To be done Tasks:❎
+   Cisco Routers Configured
+   Cisco Switches Configured
+   IP Addressing
+   End-Host Connectivity
+   HA Cluster Setup
+   IPsec VPN Establishment.
+   Security Policy Creation
+   Network Services Configuration
+   Policy Routing & Integration
 
 ---
 
