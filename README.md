@@ -97,15 +97,15 @@ This project simulates a **realistic bank network** at a CCNA level with **Forti
 
 ## :no_pedestrians: Team Members
 
-| No | Names                             | ID       |
-|----|-----------------------------------|----------|
-| 1  | Ziad Refaie AbuAlftooh            | 21043261 |
-| 2  | Abdullah Ibrahim Abdo             | 21027586 |
-| 3  | Mahmoud Mohamed Mahmoud Fahim     | 21080355 |
-| 4  | Haitham Ibrahim Mahmoud Hosny     | 21045793 |
-| 5  | Abdullah Muhammad Khalifa         | 21098162 |
-| 6  | Ahmed Mohamed Ahmed               | 21082322 |
-| 7  |                                   |          |
+| No | Names                             | ID       | Controbution|
+|----|-----------------------------------|----------|-------------|
+| 1  | Ziad Refaie AbuAlftooh            | 21043261 | 100%        |
+| 2  | Abdullah Ibrahim Abdo             | 21027586 | 0%          |
+| 3  | Mahmoud Mohamed Mahmoud Fahim     | 21080355 | 0%          |
+| 4  | Haitham Ibrahim Mahmoud Hosny     | 21045793 | 0%          |
+| 5  | Abdullah Muhammad Khalifa         | 21098162 | 0%          |
+| 6  | Ahmed Mohamed Ahmed               | 21082322 | 0%          |
+| 7  |                                   |          |             |
 
 Under the Supervision of,
 Eng\Elhosien Ahmed & Dr.Hussien Harb
