@@ -15,17 +15,23 @@ The network consists of:
 - All interconnected securely through **WAN links**.
 
 Done Tasks: ✔️
-   Topology Built
-To be done Tasks:❎
-   Cisco Routers Configured
-   Cisco Switches Configured
-   IP Addressing
-   End-Host Connectivity
-   HA Cluster Setup
-   IPsec VPN Establishment.
-   Security Policy Creation
-   Network Services Configuration
-   Policy Routing & Integration
+- **Topology Built:** HQ and 4 Branch sites constructed in GNS3. ✔️
+
+To be done Tasks:❌
+ - **Cisco Routers Configured:** OSPF routing implemented across all 6 routers for dynamic path selection.❌
+ - **Cisco Switches Configured:** ❌
+   - VLANs created and trunked for segmentation (Server, User, Management).
+   - SVIs are configured on L3 switches for inter-VLAN routing.
+   - Access ports assigned for end-hosts.
+ - **IP Addressing:** Static IPs assigned to all network interfaces. ❌
+ - **End-Host Connectivity:** Basic layer 2 and layer 3 connectivity established between devices within the same site. ❌
+ - **HA Cluster Setup:** Configure the two HQ FortiGates into an Active-Passive High Availability cluster. ❌
+ - **IPsec VPN Establishment:** Build encrypted Site-to-Site VPN tunnels between the HQ and each of the four branches. ❌
+ - **Security Policy Creation:** Define and implement zone-based firewall policies to enforce least-privilege access. ❌
+ - **Network Services Configuration:** ❌
+   -Set up DHCP servers on FortiGates for user VLANs.
+   -Configure necessary NAT policies (Source NAT for internet access).   
+ - **Policy Routing & Integration:** Ensure secure traffic flow over the VPN tunnels by integrating FortiGate policies with the existing OSPF routing table. ❌
 
 ---
 
