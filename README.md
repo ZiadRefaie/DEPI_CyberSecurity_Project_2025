@@ -105,7 +105,7 @@ This project simulates a **realistic bank network** at a CCNA level with **Forti
 | 4  | Haitham Ibrahim Mahmoud Hosny     | 21045793 | 
 | 5  | Abdullah Muhammad Khalifa         | 21098162 | 
 | 6  | Ahmed Mohamed Ahmed               | 21082322 |
-| 7  |                                   |          |
+| 7  | Abdullah Abdelrehim Hassan        | 21093644 |
 
 Under the Supervision of,
 Eng\Elhosien Ahmed & Dr.Hussien Harb
