@@ -1,10 +1,108 @@
 ## Physical_Topology
+# Bank Network Physical Documentation
+
+## Device Inventory
+
+| Site | Device Type | Quantity | Hostname | Model | Role |
+|------|-------------|----------|----------|-------|------|
+| **HQ** | FortiGate Firewall | 2 | FW-HQ1, FW-HQ2 | FortiGate VM | HA Cluster |
+| **HQ** | Cisco Router | 2 | RTR-HQ1, RTR-HQ2 | Cisco 7200 | Core Routing |
+| **HQ** | Cisco L3 Switch | 2 | SW-HQ-L3-1, SW-HQ-L3-2 | Cisco 3650 | Core Switching |
+| **HQ** | Cisco L2 Switch | 2 | SW-HQ-L2-1, SW-HQ-L2-2 | Cisco 2960 | Access Layer |
+| **Branch 1** | FortiGate Firewall | 1 | FW-BR1 | FortiGate VM | Branch Security |
+| **Branch 1** | Cisco Router | 1 | RTR-BR1 | Cisco 7200 | Branch Routing |
+| **Branch 1** | Cisco Switch | 1 | SW-BR1 | Cisco 7200 | Branch Switching |
+| **Branch 2** | FortiGate Firewall | 1 | FW-BR2 | FortiGate VM | Branch Security |
+| **Branch 2** | Cisco Router | 1 | RTR-BR2 | Cisco 7200 | Branch Routing |
+| **Branch 2** | Cisco Switch | 1 | SW-BR2 | Cisco 7200 | Branch Switching |
+| **Branch 3** | FortiGate Firewall | 1 | FW-BR3 | FortiGate VM | Branch Security |
+| **Branch 3** | Cisco Router | 1 | RTR-BR3 | Cisco 7200 | Branch Routing |
+| **Branch 3** | Cisco Switch | 1 | SW-BR3 | Cisco 7200 | Branch Switching |
+| **Branch 4** | FortiGate Firewall | 1 | FW-BR4 | FortiGate VM | Branch Security |
+| **Branch 4** | Cisco Router | 1 | RTR-BR4 | Cisco 7200 | Branch Routing |
+| **Branch 4** | Cisco Switch | 1 | SW-BR4 | Cisco 7200 | Branch Switching |
+
+## Physical Connections
+
+| Connection ID | From Device | From Port | To Device | To Port | Cable Type | Purpose |
+|---------------|-------------|-----------|-----------|---------|------------|---------|
+| CONN-HQ-001 | FW-HQ1 | port1 | RTR-HQ1 | Gi0/0 | Ethernet | WAN Uplink |
+| CONN-HQ-002 | FW-HQ1 | port2 | SW-HQ-L3-1 | Gi1/0/1 | Ethernet | LAN Uplink |
+| CONN-HQ-003 | FW-HQ2 | port1 | RTR-HQ2 | Gi0/0 | Ethernet | WAN Uplink |
+| CONN-HQ-004 | FW-HQ2 | port2 | SW-HQ-L3-2 | Gi1/0/1 | Ethernet | LAN Uplink |
+| CONN-HQ-005 | FW-HQ1 | port3 | FW-HQ2 | port3 | Ethernet | HA Heartbeat |
+| CONN-HQ-006 | RTR-HQ1 | Gi0/1 | RTR-HQ2 | Gi0/1 | Ethernet | Router Redundancy |
+| CONN-HQ-007 | SW-HQ-L3-1 | Gi1/0/24 | SW-HQ-L3-2 | Gi1/0/24 | Ethernet | Switch Stack |
+| CONN-HQ-008 | SW-HQ-L3-1 | Gi1/0/10 | SW-HQ-L2-1 | Gi1/0/1 | Ethernet | To Access Layer |
+| CONN-HQ-009 | SW-HQ-L3-2 | Gi1/0/10 | SW-HQ-L2-2 | Gi1/0/1 | Ethernet | To Access Layer |
+
+## IP Addressing Scheme
+
+### HQ Subnets
+
+| Subnet Name | Network CIDR | Gateway | VLAN ID | Purpose |
+|-------------|--------------|---------|---------|----------|
+| SERVERS | 10.10.10.0/24 | 10.10.10.1 | 10 | Core Banking Servers |
+| USERS | 10.10.20.0/24 | 10.10.20.1 | 20 | HQ Staff Workstations |
+
+
+### Branch Subnets
+
+| Branch | Network CIDR | Gateway | VLAN ID | Purpose |
+|--------|--------------|---------|---------|----------|
+| BR1 | 10.20.10.0/24 | 10.20.10.1 | 10 | Branch Users |
+| BR2 | 10.30.10.0/24 | 10.30.10.1 | 10 | Branch Users |
+| BR3 | 10.40.10.0/24 | 10.40.10.1 | 10 | Branch Users |
+| BR4 | 10.50.10.0/24 | 10.50.10.1 | 10 | Branch Users |
+
+## End Devices (VPCS)
+
+| Site | Quantity | Device Type | IP Range | Purpose |
+|------|----------|-------------|----------|----------|
+| **HQ** | 2 | Core Banking Servers | 10.10.10.10-20 | Transaction Processing |
+| **HQ** | 1 | Database Server | 10.10.10.30 | Customer Data |
+| **HQ** | 1 | DHCP Server | 10.10.10.40 | IP Management |
+| **HQ** | 1 | AAA Server | 10.10.10.50 | Authentication |
+| **HQ** | 1 | Syslog Server | 10.10.10.60 | Logging |
+| **Each Branch** | 2 | Teller Workstations | .100-150 | Banking Operations |
+| **Each Branch** | 1 | Customer Service PC | .151-160 | Customer Support |
+| **Each Branch** | 1 | ATM Simulator | .161-170 | ATM Interface |
+
+## Total Device Summary
+
+| Device Type | HQ Count | Branch Count | Total |
+|-------------|----------|--------------|-------|
+| FortiGate Firewalls | 2 | 4 | 6 |
+| Cisco Routers | 2 | 4 | 6 |
+| Cisco Switches | 4 | 4 | 8 |
+| End Devices (VPCS) | 6 | 16 | 22 |
+| **GRAND TOTAL** | **14** | **28** | **42** |
+
+## Security Zones
+
+| Zone Name | Security Level | Devices | Description |
+|-----------|---------------|---------|-------------|
+| Untrust | 0 | Internet-facing interfaces | External WAN Connections |
+| Trust | 100 | Internal user networks | Trusted Internal Zone |
+| DMZ | 50 | Public servers | Demilitarized Zone |
+| Management | 200 | Network infrastructure | Management Interfaces |
+
+## High Availability Configuration
+
+| Parameter | Primary FW-HQ1 | Secondary FW-HQ2 |
+|-----------|----------------|------------------|
+| HA Mode | Active | Passive |
+| Priority | 200 | 150 |
+| Monitor Interfaces | port1, port2 | port1, port2 |
+| Failover Time | < 5 seconds | < 5 seconds |
+
+---
+**Project:** Bank Network Security & FortiGate Integration  
+**Topology:** 1 HQ + 4 Branches
 
 
 
 
 
-
-## Logical_Topology
 
 
