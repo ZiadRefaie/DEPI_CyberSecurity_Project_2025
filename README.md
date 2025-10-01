@@ -16,14 +16,14 @@ The network consists of:
 
 Done Tasks: ✔️
 - **Topology Built:** HQ and 4 Branch sites constructed in GNS3. ✔️
+- **Cisco Routers Configured:** OSPF routing implemented across all 6 routers for dynamic path selection. ✔️
+- **IP Addressing:** Static IPs assigned to all network interfaces. ✔️ (review the Documentation Section for details )
 
 To be done Tasks:❌
- - **Cisco Routers Configured:** OSPF routing implemented across all 6 routers for dynamic path selection.❌
  - **Cisco Switches Configured:** ❌
    - VLANs created and trunked for segmentation (Server, User, Management).
    - SVIs are configured on L3 switches for inter-VLAN routing.
    - Access ports assigned for end-hosts.
- - **IP Addressing:** Static IPs assigned to all network interfaces. ❌
  - **End-Host Connectivity:** Basic layer 2 and layer 3 connectivity established between devices within the same site. ❌
  - **HA Cluster Setup:** Configure the two HQ FortiGates into an Active-Passive High Availability cluster. ❌
  - **IPsec VPN Establishment:** Build encrypted Site-to-Site VPN tunnels between the HQ and each of the four branches. ❌
