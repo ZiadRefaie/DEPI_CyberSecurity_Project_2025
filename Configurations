@@ -1,0 +1,70 @@
+**Switch_Configuration:**
+Any Login_Credentials_Configuration -> User will be the Name of the Branch/HQ & Password will always be Cisco
+Ex: user: Branch_1 Pass: Cisco 
+
+1. Basic Switch Configuration
+Hostname configuration
+Enable secret password
+Disable IP domain lookup
+Banner message 
+############################################
+        Only Authorized Employees
+############################################
+
+2. Management Plane Security
+Create a management VLAN ( VLAN 100 )
+Configure the management IP address
+Set default gateway
+Configure SSH access
+Create local user accounts 
+Set SSH version 2 only
+Configure session timeouts
+
+3. Access Control
+Configure console port security
+Configure AUX port (disable if unused)
+Configure VTY lines for SSH only
+Set access-class restrictions
+Configure privilege levels
+
+4. Port Security
+Enable port security on access ports
+Set the maximum MAC addresses to 2 per port
+Configure violation actions (shutdown/restrict)
+Configure sticky MAC addresses
+Enable port security aging
+
+5. VLAN Security
+Create VLANs ( IT -> 10 / Sales -> 20)
+Assign access ports to specific VLANs
+Configure trunk ports with specific VLANs
+Set native VLAN (VLAN 99 )
+Enable VLAN pruning
+
+6. Trunk Security
+Configure trunk negotiation (ON desirable)
+Specify allowed VLANs on trunks
+Set native VLAN different from data VLANs
+Enable DTP protection
+
+7. STP Security
+Enable PortFast on End-User devices
+Enable Root Guard
+Enable BPDU Guard on access ports
+Set STP priority if required
+
+8. DHCP Security
+Enable DHCP Snooping
+Configure trusted ports (uplinks)
+Configure untrusted ports (access ports)
+
+9. ARP Security
+Enable Dynamic ARP Inspection (DAI)
+Configure DAI on VLANs
+Set ARP validation
+Configure trusted ports for DAI
+
+10. IP Source Guard
+Enable IP Source Guard
+Configure on access ports
+Set binding table sources
