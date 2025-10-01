@@ -29,8 +29,8 @@ To be done Tasks:❌
  - **IPsec VPN Establishment:** Build encrypted Site-to-Site VPN tunnels between the HQ and each of the four branches. ❌
  - **Security Policy Creation:** Define and implement zone-based firewall policies to enforce least-privilege access. ❌
  - **Network Services Configuration:** ❌
-   -Set up DHCP servers on FortiGates for user VLANs.
-   -Configure necessary NAT policies (Source NAT for internet access).   
+     -  Set up DHCP servers on FortiGates for user VLANs.
+     -  Configure necessary NAT policies (Source NAT for internet access).   
  - **Policy Routing & Integration:** Ensure secure traffic flow over the VPN tunnels by integrating FortiGate policies with the existing OSPF routing table. ❌
 
 ---
