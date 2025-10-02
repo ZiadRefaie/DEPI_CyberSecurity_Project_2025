@@ -2,7 +2,7 @@
 ## Network Security Fundamentals and FortiGate Integration  
 
 *Project Repository — National Bank (HQ + 4 Branches)*  
-![Bank Network Topology](https://github.com/ZiadRefaie/DEPI_CyberSecurity_Project_2025/blob/3b919c2e81d75f5a1548245fd3e3ecf3f348bd97/Bank_Topology.png)
+![Bank Network Topology](https://github.com/ZiadRefaie/DEPI_CyberSecurity_Project_2025/blob/c97826ce09e09d0bdf916572d4843cf978091acd/Bank_Topology%20v2.png)
 
 ---
 
