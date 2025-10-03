@@ -73,3 +73,4 @@ Enable ARP validation (source MAC, destination MAC, IP).
 Enable IP Source Guard globally.
 Apply IP Source Guard on all access ports.
 
+(Don't forget to enable IP routing on MLS for inter-VLANs routing)
