@@ -1,70 +1,75 @@
 **Switch_Configuration:**
-Any Login_Credentials_Configuration -> User will be the Name of the Branch/HQ & Password will always be Cisco
-Ex: user: Branch_1 Pass: Cisco 
+1. Basic Device Configuration
 
-1. Basic Switch Configuration
-Hostname configuration
-Enable secret password
-Disable IP domain lookup
-Banner message 
-############################################
-        Only Authorized Employees
-############################################
+Set hostname according to the Branch/HQ name.
+Configure enable secret password: Cisco.
+Disable IP domain lookup.
+Set login banner: "Only Authorized Employees".
 
-2. Management Plane Security
-Create a management VLAN ( VLAN 100 )
-Configure the management IP address
-Set default gateway
-Configure SSH access
-Create local user accounts 
-Set SSH version 2 only
-Configure session timeouts
+2. Management Security
+
+Create Management VLAN: VLAN 100.
+Assign the management IP address.
+Configure the default gateway for the management VLAN.
+Create a local user with username: Branch_Name and password: Cisco.
+Enable SSH version 2 only (disable Telnet).
+Set session timeout to 10 minutes.
 
 3. Access Control
-Configure console port security
-Configure AUX port (disable if unused)
-Configure VTY lines for SSH only
-Set access-class restrictions
-Configure privilege levels
+
+Secure console port with a password.
+Disable AUX port.
+Restrict VTY access to SSH only.
+Apply access-class restrictions on VTY lines (allow management subnet only).
 
 4. Port Security
-Enable port security on access ports
-Set the maximum MAC addresses to 2 per port
-Configure violation actions (shutdown/restrict)
-Configure sticky MAC addresses
-Enable port security aging
 
-5. VLAN Security
-Create VLANs ( IT -> 10 / Sales -> 20)
-Assign access ports to specific VLANs
-Configure trunk ports with specific VLANs
-Set native VLAN (VLAN 99 )
-Enable VLAN pruning
+Enable port security on all access ports.
+Allow a maximum of 2 MAC addresses per port.
+Set violation action to shutdown.
+Enable sticky MAC address learning.
+Set port security aging to 10 minutes.
+
+5. VLAN Configuration
+
+Create VLANs:
+VLAN 10 → IT
+VLAN 20 → Sales
+VLAN 30 → ATM
+VLAN 40 → Voice
+VLAN 99 → Native VLAN
+VLAN 100 → Management
+Assign access ports to the appropriate VLANs.
+Configure trunk ports to carry required VLANs.
+Set native VLAN to 99.
 
 6. Trunk Security
-Configure trunk negotiation (ON desirable)
-Specify allowed VLANs on trunks
-Set native VLAN different from data VLANs
-Enable DTP protection
+Set trunk negotiation to on.
+Specify allowed VLANs on trunk links.
+Set native VLAN to 99.
+Enable DTP protection.
 
 7. STP Security
-Enable PortFast on End-User devices
-Enable Root Guard
-Enable BPDU Guard on access ports
-Set STP priority if required
+
+Enable PortFast on all end-user access ports.
+Enable Root Guard on trunk ports.
+Enable BPDU Guard on access ports.
 
 8. DHCP Security
-Enable DHCP Snooping
-Configure trusted ports (uplinks)
-Configure untrusted ports (access ports)
+
+Enable DHCP Snooping globally.
+Configure VLANs for DHCP Snooping (10, 20, 30, 40, 100).
+Set uplink/trunk ports as trusted.
+Keep access ports as untrusted.
 
 9. ARP Security
-Enable Dynamic ARP Inspection (DAI)
-Configure DAI on VLANs
-Set ARP validation
-Configure trusted ports for DAI
+
+Enable Dynamic ARP Inspection (DAI) on all user VLANs (10, 20, 30, 40, 100).
+Configure trusted ports for uplinks/trunks.
+Enable ARP validation (source MAC, destination MAC, IP).
 
 10. IP Source Guard
-Enable IP Source Guard
-Configure on access ports
-Set binding table sources
+
+Enable IP Source Guard globally.
+Apply IP Source Guard on all access ports.
+
