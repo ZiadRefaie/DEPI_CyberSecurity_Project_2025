@@ -71,7 +71,7 @@
 
 | Device Type          | HQ Count | Branch Count | Total |
 |----------------------|----------|--------------|-------|
-| FortiGate Firewalls  | 2        | 4            | 6     |
+| FortiGate Firewalls  | 2        | 0            | 2     |
 | Cisco Routers        | 2        | 4            | 6     |
 | Cisco Switches       | 4        | 4            | 8     |
 | End Devices (VPCS)   | 6        | 16           | 22    |
