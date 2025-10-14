@@ -18,19 +18,18 @@ Done Tasks: ✔️
 - **Topology Built:** HQ and 4 Branch sites constructed in GNS3. ✔️
 - **Cisco Routers Configured:** OSPF routing implemented across all 6 routers for dynamic path selection. ✔️
 - **IP Addressing:** Static IPs assigned to all network interfaces. ✔️ (review the Documentation Section for details )
-
-To be done Tasks:❌
- - **Cisco Switches Configured:** ❌
+- **Cisco Switches Configured:** ✔️ 
    - VLANs created and trunked for segmentation (Server, User, Management).
    - SVIs are configured on L3 switches for inter-VLAN routing.
    - Access ports assigned for end-hosts.
- - **End-Host Connectivity:** Basic layer 2 and layer 3 connectivity established between devices within the same site. ❌
+- **End-Host Connectivity:** Basic layer 2 and layer 3 connectivity established between devices within the same site. ✔️
+- **Network Services Configuration:** ✔️
+     -  Set up DHCP servers on FortiGates for user VLANs.
+     -  Configure necessary NAT policies (Source NAT for internet access).   
+To be done Tasks:❌
  - **HA Cluster Setup:** Configure the two HQ FortiGates into an Active-Passive High Availability cluster. ❌
  - **IPsec VPN Establishment:** Build encrypted Site-to-Site VPN tunnels between the HQ and each of the four branches. ❌
  - **Security Policy Creation:** Define and implement zone-based firewall policies to enforce least-privilege access. ❌
- - **Network Services Configuration:** ❌
-     -  Set up DHCP servers on FortiGates for user VLANs.
-     -  Configure necessary NAT policies (Source NAT for internet access).   
  - **Policy Routing & Integration:** Ensure secure traffic flow over the VPN tunnels by integrating FortiGate policies with the existing OSPF routing table. ❌
 
 ---
@@ -44,20 +43,6 @@ Banks handle highly sensitive customer and financial data, making network design
 - **Secure Connectivity:** Enable secure HQ–Branch and internet communication.  
 - **Regulatory Compliance:** Meet PCI DSS and banking data privacy requirements.  
 - **High Availability:** Ensure redundancy for uninterrupted banking services.  
-
----
-
-## 🛠 2. Solution Approach  
-
-The network combines **Cisco routers & switches** with **FortiGate NGFWs** for advanced security.  
-The simulation is fully deployed in **GNS3**, offering flexibility for configuration, testing, and troubleshooting.  
-
-### Key Elements  
-- **FortiGate NGFWs** → Firewalling, VPNs, and advanced security at HQ & branches.  
-- **Cisco Routers & Switches** → Handle routing, VLAN segmentation, and WAN links.  
-- **HQ Redundancy** → Dual routers, dual core switches, and VLAN separation for End Users, Servers, and Management.  
-- **WAN Links** → Simulated serial links between HQ and branches.  
-- **End Devices** → PCs, printers, ATMs, and servers simulated using VPCS.  
 
 ---
 
@@ -85,9 +70,8 @@ The simulation is fully deployed in **GNS3**, offering flexibility for configura
 ## ⚙️ 4. GNS3 Setup & Device List  
 
 ### Fortinet Devices  
-- **HQ:** 2 × FortiGates (HA).  
-- **Branches:** 1 × FortiGate each (×4).  
-- **Total:** **6 FortiGates**.  
+- **HQ:** 2 × FortiGates (HA).   
+- **Total:** **2 FortiGates**.  
 
 ### Cisco Devices  
 - **Routers:**  
@@ -108,7 +92,7 @@ The simulation is fully deployed in **GNS3**, offering flexibility for configura
 ---
 
 ## ✅ Summary  
-This project simulates a **realistic bank network** at a CCNA level with **FortiGate NGFW integration** for enterprise security. Using **GNS3**, it demonstrates:  
+This project simulates a **realistic bank network** with **FortiGate NGFW integration** for enterprise security. Using **GNS3**, it demonstrates:  
 - Routing & VLAN fundamentals  
 - Secure HQ–Branch WAN design
 - High availability at HQ  
