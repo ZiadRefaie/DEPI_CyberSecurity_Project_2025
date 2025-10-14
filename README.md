@@ -46,7 +46,7 @@ Banks handle highly sensitive customer and financial data, making network design
 
 ---
 
-## 📍 3. Project Scope  
+## 📍 2. Project Scope  
 
 ### Headquarters (HQ)  
 - **Routers:** 2 (ISP connectivity & branch links).  
@@ -67,7 +67,7 @@ Banks handle highly sensitive customer and financial data, making network design
 
 ---
 
-## ⚙️ 4. GNS3 Setup & Device List  
+## ⚙️ 3. GNS3 Setup & Device List  
 
 ### Fortinet Devices  
 - **HQ:** 2 × FortiGates (HA).   
