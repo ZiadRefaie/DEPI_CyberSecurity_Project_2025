@@ -92,13 +92,6 @@ Banks handle highly sensitive customer and financial data, making network design
 
 ---
 
-## ✅ Summary  
-This project simulates a **realistic bank network** with **FortiGate NGFW integration** for enterprise security. Using **GNS3**, it demonstrates:  
-- Routing & VLAN fundamentals  
-- Secure HQ–Branch WAN design
-- High availability at HQ  
-- Firewall, VPN, and policy enforcement  
-
 ## :no_pedestrians: Team Members
 
 | No | Names                             | ID       |
