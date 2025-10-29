@@ -26,7 +26,7 @@ Done Tasks: ✔️
 - **Network Services Configuration:** ✔️
      -  Set up DHCP servers on FortiGates for user VLANs.
      -  Configure necessary NAT policies (Source NAT for internet access).
- -  - **HA Cluster Setup:** Configure the two HQ FortiGates into an Active-Passive High Availability cluster. ✔️   
+ -  **HA Cluster Setup:** Configure the two HQ FortiGates into an Active-Passive High Availability cluster. ✔️   
 
 To be done Tasks:❌
 
