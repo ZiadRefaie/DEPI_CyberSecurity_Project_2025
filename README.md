@@ -26,13 +26,12 @@ Done Tasks: ✔️
 - **Network Services Configuration:** ✔️
      -  Set up DHCP servers on FortiGates for user VLANs.
      -  Configure necessary NAT policies (Source NAT for internet access).
- -  **HA Cluster Setup:** Configure the two HQ FortiGates into an Active-Passive High Availability cluster. ✔️   
+ -  **HA Cluster Setup:** Configure the two HQ FortiGates into an Active-Passive High Availability cluster. ✔️
+ - **Security Policy Creation:** Define and implement zone-based firewall policies to enforce least-privilege access. ✔
+ - **Policy Routing & Integration:** Ensure secure traffic flow over the VPN tunnels by integrating FortiGate policies with the existing OSPF routing table. ✔ 
 
-To be done Tasks:❌
+~~To be done Tasks:❌~~
 
- - **IPsec VPN Establishment:** Build encrypted Site-to-Site VPN tunnels between the HQ and each of the four branches. ❌
- - **Security Policy Creation:** Define and implement zone-based firewall policies to enforce least-privilege access. ❌
- - **Policy Routing & Integration:** Ensure secure traffic flow over the VPN tunnels by integrating FortiGate policies with the existing OSPF routing table. ❌
 
 ---
 
