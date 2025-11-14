@@ -1,7 +1,14 @@
+HQ1 UserName:HQ1 /Password:Cisco
+HQ2 UserName:HQ2 /Password:Cisco
+Branch1 UserName:Branch1 /Password:Cisco
+Branch2 UserName:Branch2 /Password:Cisco
+Branch3 UserName:Branch3 /Password:Cisco
+Branch4 UserName:Branch4 /Password:Cisco
+
 **Switch_Configuration:**
 1. Basic Device Configuration
 
-Set hostname according to the Branch/HQ name.
+Set the hostname according to the Branch/HQ name.
 Configure enable secret password: Cisco.
 Disable IP domain lookup.
 Set login banner: "Only Authorized Employees".
