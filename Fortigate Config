@@ -18,14 +18,13 @@ FORTI_HQ 1 ---> 192.168.1.201 (Secondary)          =============         FORTI_H
 -WAN to LAN: Deny all (or restricted VPN access only)
 -LAN to WAN: Outbound internet access (HTTP/HTTPS/DNS
 -LAN to Servers: Permitted access to specific services
--Inter-VLAN Rules: Control traffic between IT(10), Sales(20), ATM(30), Voice(40) VLANs
 -Servers to LAN: Restricted/denied (servers shouldn't initiate connections to internal networks)
 
 4. Network Address Translation (NAT)
 -Source NAT: Internal to Internet
 
 5. VPN Configuration
--Site-to-Site IPsec VPN: To all 4 branches
+-Site-to-Site IPsec VPN: To all 4 branches (will be implemented in the Cisco Routers due to not having FortiGate firewalls on the branches.)
 -SSL VPN: Remote access for employees
 
 6. High Availability (HA)
