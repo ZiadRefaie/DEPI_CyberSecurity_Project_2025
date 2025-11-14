@@ -1,3 +1,53 @@
 Username Admin
 Pass Admin
 FORTI_HQ 1 ---> 192.168.1.201 (Secondary)          =============         FORTI_HQ2 ----> 192.168.1.200 (Primary)
+
+1. Basic System Configuration
+- Set hostname (FW-HQ-Primary)
+- Configure admin password
+- Set time zone and NTP servers
+- Enable FortiGuard updates
+
+2. Interface Configuration
+-WAN Interface (port1): Public IP/DHCP, external connectivity
+-LAN Interface (port2): Internal trusted network (10.5.0.0/16)
+-HA Heartbeat (port3): Connection to secondary FortiGate
+-Server VLAN Interface (port4): 172.16.10.0/24 network
+
+3. Security Policies (Firewall Rules)
+-WAN to LAN: Deny all (or restricted VPN access only)
+-LAN to WAN: Outbound internet access (HTTP/HTTPS/DNS
+-LAN to Servers: Permitted access to specific services
+-Inter-VLAN Rules: Control traffic between IT(10), Sales(20), ATM(30), Voice(40) VLANs
+-Servers to LAN: Restricted/denied (servers shouldn't initiate connections to internal networks)
+
+4. Network Address Translation (NAT)
+-Source NAT: Internal to Internet
+
+5. VPN Configuration
+-Site-to-Site IPsec VPN: To all 4 branches
+-SSL VPN: Remote access for employees
+
+6. High Availability (HA)
+-Configure an HA cluster with a secondary FortiGate
+-Set HA mode (Active-Passive recommended)
+-Configure the heartbeat interface and monitoring
+
+7. Routing Configuration
+-Static Routes: To internal networks (10.5.0.0/16, 172.16.10.0/24)
+-OSPF: If using dynamic routing with an internal network
+
+8. Security Services
+-Antivirus: Enable scanning for HTTP, FTP, SMTP
+-Intrusion Prevention (IPS): Enable with banking-specific profile
+-Web Filtering: Restrict access to malicious categories
+-Application Control: Block unwanted applications
+
+9. Authentication
+-Local Users/Groups: For admin access
+-RADIUS Integration: With the AAA server (172.16.10.50)
+
+10. Logging and Monitoring
+-Configure syslog to the central server (172.16.10.60)
+-Enable traffic logging for security policies
+-Set up email alerts for critical events
