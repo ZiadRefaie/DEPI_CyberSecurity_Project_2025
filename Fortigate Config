@@ -1,6 +1,7 @@
 Username Admin
 Pass Admin
 FORTI_HQ 1 ---> 192.168.1.201 (Secondary)          =============         FORTI_HQ2 ----> 192.168.1.200 (Primary)
+Configuration_Backup file password --> 123
 
 1. Basic System Configuration
 - Set hostname (FW-HQ-Primary)
